@@ -18,7 +18,7 @@ function draw() {
   context.clearRect(0, 0, width, height);
   for (let i = 0; i < tiles.length; i++) {
     var tile = tiles[i];
-    tile.draw(context); 
+    tile.draw(context);
   }
   requestAnimationFrame(draw);
 }
@@ -34,7 +34,7 @@ function setup() {
     for (let i = 1; i < colY; i++) {
       var gridX = width / lineX;
       var gridY = height / colY;
-      var side = Math.min(gridX, gridY); 
+      var side = Math.min(gridX, gridY);
       var tile = new Tiles(i * gridX, j * gridY, side); // Changed Square to Tiles
       tile.loadImage("img/tills.png");
       tiles.push(tile); // Changed squares to tiles
